@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a58fef76-00fa-4cff-87d2-1820e3c1e968" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/1_architecture/images/BN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_architecture/images/LN.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_architecture/1_4_FFN_Add_LN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/1_architecture/1_4_FFN_Add_LN.ipynb" afterDir="false" />
     </list>
@@ -85,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758700214898</updated>
-      <workItem from="1758700216042" duration="8198000" />
+      <workItem from="1758700216042" duration="8529000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -111,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758700990844</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first">
+      <option name="closed" value="true" />
+      <created>1758712518083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758712518083</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

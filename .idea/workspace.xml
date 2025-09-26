@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a58fef76-00fa-4cff-87d2-1820e3c1e968" name="Changes" comment="first">
-      <change beforePath="$PROJECT_DIR$/.idea/LLM_learning_notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LLM_learning_notes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_architecture/1_4_FFN_Add_LN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/1_architecture/1_4_FFN_Add_LN.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_architecture/1_4_LN.py" beforeDir="false" afterPath="$PROJECT_DIR$/1_architecture/1_4_LN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758700214898</updated>
       <workItem from="1758700216042" duration="8529000" />
-      <workItem from="1758859622349" duration="8339000" />
+      <workItem from="1758859622349" duration="10841000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -154,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758712518083</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="first">
+      <option name="closed" value="true" />
+      <created>1758875284373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758875284373</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +170,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LLM_learning_notes$1_4_LN.coverage" NAME="1_4_LN Coverage Results" MODIFIED="1758868474040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1_architecture" />
+    <SUITE FILE_PATH="coverage/LLM_learning_notes$1_4_LN.coverage" NAME="1_4_LN Coverage Results" MODIFIED="1758878265592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1_architecture" />
   </component>
 </project>

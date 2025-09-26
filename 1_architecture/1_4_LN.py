@@ -56,7 +56,7 @@ class LN(nn.Module):
             f"expected trailing shape {self.normalized_shape}, but got {tuple(x.shape)}"
 
         # 需要归一化的维度索引，例如 normalized_shape 有 2 维 -> dims=[-1,-2]
-        dims = [-(i + 1) for i in range(len(self.normalized_shape))]
+        dims = tuple([-(i + 1) for i in range(len(self.normalized_shape))])
 
         # 计算均值与方差（按被归一化的维度），保留维度便于广播
         mean = x.mean(dims, keepdim=True)  # 形状: 与 x 相同，但被归一化的维度都缩成 1
@@ -84,17 +84,22 @@ if __name__ == "__main__":
     print("输入 x.shape:", tuple(x.shape))          # (2, 3, 4)
     print("输入 x:", x)
 
+    """
+    如果你确实想做“对整个通道+特征平面一起归一化”（比如 ViT/CNN 一些变体里会这么做），那就继续用 (3,4)；
+    但若你的语义是“每个 token 的 embedding 做 LN”，那就该用 (4,)，这也正是 Transformer 的标准做法。
+    """
     # 对 x 的最后两维 (3,4) 做 LayerNorm（即对 C 和 K 一起归一化）
     ln = LN(x.shape[1:])                           # normalized_shape = (3, 4)
+    # ln = LN(x.shape[-1:])                        # normalized_shape = (4,) 只对 K 归一化，每个 token 独立归一化，Transformer 标准做法
 
-    # # 前向
-    # y = ln(x)
-    # print("输出 y.shape:", tuple(y.shape))         # (2, 3, 4)
-    #
-    # # —— 验证归一化：按 (3,4) 两维做均值/方差 —— #
-    # # 计算每个样本的均值/方差（保留 batch 维度）
-    # dims = [-1, -2]  # 对 (3,4) 这两维
-    # y_mean = y.mean(dim=dims)                      # 形状: (2,)
-    # y_var = y.var(dim=dims, unbiased=False)       # 形状: (2,)
-    # print("每个样本归一化后的均值≈0:", y_mean)
-    # print("每个样本归一化后的方差≈1:", y_var)
+    # 前向
+    y = ln(x)
+    print("输出 y.shape:", tuple(y.shape))         # (2, 3, 4)
+
+    # —— 验证归一化：按 (3,4) 两维做均值/方差 —— #
+    # 计算每个样本的均值/方差（保留 batch 维度）
+    dims = [-1, -2]  # 对 (3,4) 这两维
+    y_mean = y.mean(dim=dims)                      # 形状: (2,)
+    y_var = y.var(dim=dims, unbiased=False)       # 形状: (2,)
+    print("每个样本归一化后的均值≈0:", y_mean)
+    print("每个样本归一化后的方差≈1:", y_var)

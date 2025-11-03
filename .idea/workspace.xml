@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a58fef76-00fa-4cff-87d2-1820e3c1e968" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/RAG/2_RAG_Fusion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG/1_Multi_Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG/1_Multi_Query.py" afterDir="false" />
     </list>
@@ -294,7 +295,7 @@
       <workItem from="1761115764454" duration="1313000" />
       <workItem from="1761390526879" duration="3738000" />
       <workItem from="1761459741835" duration="327000" />
-      <workItem from="1762134912276" duration="4706000" />
+      <workItem from="1762134912276" duration="5884000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -360,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762140582426</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first">
+      <option name="closed" value="true" />
+      <created>1762146267398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762146267398</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -67,29 +67,30 @@ generate_queries = (
 
 
 # 6) Retrieval QA with Multi-Query
-# def get_unique_union(documents: list[list]):
-#     """Unique union of retrieved docs"""
-#     # Flatten list of lists, and convert each Document to string
-#     flattened_docs = [dumps(doc) for sublist in documents for doc in sublist]
-#     # Get unique documents
-#     unique_docs = list(set(flattened_docs))
-#     # Return
-#     return [loads(doc) for doc in unique_docs]
+def get_unique_union(documents: list[list]):
+    """Unique union of retrieved docs"""
+    # Flatten list of lists, and convert each Document to string
+    flattened_docs = [dumps(doc) for sublist in documents for doc in sublist]
+    # Get unique documents
+    unique_docs = list(set(flattened_docs))
+    # Return
+    return [loads(doc) for doc in unique_docs]
 
-def unique_union_ordered(doc_lists: list[list]):
-    seen = set()
-    merged = []
-    for sub in doc_lists:                 # 保留先出现的优先级
-        for d in sub:
-            key = (d.page_content,)       # 仅按内容去重，或加 source 等
-            if key not in seen:
-                seen.add(key)
-                merged.append(d)
-    return merged
+# def unique_union_ordered(doc_lists: list[list]):
+#     seen = set()
+#     merged = []
+#     for sub in doc_lists:                 # 保留先出现的优先级
+#         for d in sub:
+#             key = (d.page_content,)       # 仅按内容去重，或加 source 等
+#             if key not in seen:
+#                 seen.add(key)
+#                 merged.append(d)
+#     return merged
 
 # Retrieve
 question = "What is task decomposition for LLM agents?"
-retrieval_chain = generate_queries | retriever.map() | unique_union_ordered
+retrieval_chain = generate_queries | retriever.map() | get_unique_union
+# retrieval_chain = generate_queries | retriever.map() | unique_union_ordered
 docs = retrieval_chain.invoke({"question":question})
 
 
